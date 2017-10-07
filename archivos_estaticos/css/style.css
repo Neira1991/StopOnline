@@ -1,0 +1,157 @@
+#procesamiento-tabla{
+    display: none;
+}
+.no-padding{padding:5px;}
+#my-table {
+    width: 100%;
+    }
+
+#reinicio-tabla{
+    display: none; 
+    }
+#content{
+        display:none;
+}
+#chatContent{
+        float:left; 
+}
+#chat{
+        position: relative;
+        width: 100%;
+        float: left;
+        min-height: 200px;
+        height: 90%;
+        overflow: auto;
+        background-color: white;
+}
+.input-enemigo{
+      background-color: #E63030;  
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.centrar-cabecera{
+text-align: center;    
+}
+
+/*estilo para fila de resultados*/
+tr#resultados td {
+    border: 0.10em solid #C7F4FF;
+    height: 2em;
+    vertical-align: inherit;
+    background-color: #FBFEFF;
+}
+
+/* FIN de estilo para fila de resultados*/
+
+
+
+/* The disabled styles */
+
+.button.disabled, 
+.button.disabled:hover {
+    background: #eee;
+    color: #aaa;
+    border-color: #aaa;
+    cursor: default;
+    text-shadow: none;
+    position: static;
+    box-shadow: none;       
+}
+
+
+/*podium de resultados */
+.competition-podium {
+    height: 250px;
+    position: relative;
+    width: 350px;
+    margin:50px;
+  	display: inline-block;
+    background:#f6f3ed;
+}
+.competition-podium .podium-block {
+    width: 110px;
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+.competition-podium .podium-block .place {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 15px;
+}
+.competition-podium .podium-block .sum {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 70px;
+}
+
+.competition-podium .podium-block.bronze {
+    color: #e6d6bf;
+    left: 10px;
+}
+.competition-podium .podium-block.bronze .podium {
+    background: #e6d6bf;
+    height: 0px;
+}
+.competition-podium .podium-block.bronze .name {
+    color: #856e4e;
+}
+
+.competition-podium .podium-block.gold {
+    color: #E87E04;
+    left: 120px;
+}
+.competition-podium .podium-block.gold .podium {
+    background: #ead679;
+    height: 0px;
+}
+.competition-podium .podium-block.gold .name {
+    color: #856e4e;
+    text-align:center
+}
+
+.competition-podium .podium-block.silver {
+    color: #cbd9de;
+    left: 230px;
+}
+.competition-podium .podium-block.silver .podium {
+    background: #cbd9de;
+    height: 0px;
+}
+.competition-podium .podium-block.silver .name {
+    color: #856e4e;
+  text-align:center
+}
+.podium {
+    display: table;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.podium > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #4D4D4D;
+    font-size: 1.5em;
+}

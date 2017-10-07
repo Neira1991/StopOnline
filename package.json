@@ -1,0 +1,12 @@
+{
+    "name": "socket_stop",
+    "version": "0.0.1",
+    "description": "chat desarrollo en node js",
+    "mani": "app.js",
+    "author": "Jhon Neira",
+    "dependencies":{
+        "express": "~3.2.4",
+        "socket.io": "~0.9.14"
+    }
+    
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Stop Online
+    </title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid no-padding">
+        <div id="page-header" class="page-header">
+            <h1>Stop Online<small> Desarrollado por Intuitiva</small></h1>
+
+        </div>
+
+        <div class="input-group" style="width:300px; text-align:center; margin:0" id="nickContainer">
+            <input type="text" id="nickname" class="form-control input-lg" placeholder="Ingrese su usuario" />
+            <span class="input-group-btn">
+                    <button class="btn btn-lg btn-primary" type="submit" id="setNick"> OK</button>
+                </span>
+        </div>
+        <div class="alert fade in alert-danger alert-dismissable" data-dismiss="alert" id="login-error" style="display:none;">
+            <button type="button" class="close" id="closeAlert">X</button> El <strong>USUARIO!</strong> esta reservado, o esta vacio o hay un espacio en el nickname.
+        </div>
+        <div class="alert alert-danger" id="login-vacio" style="display:none;"> 
+          Debes <strong> INGRESAR! </strong> un NickName.
+        </div>
+        <div id="content" class="row" >
+
+            <div id="chatContent" class="col-xs-10 col-md-10 col-sm-10">
+                <div class="panel ">
+                    <div id="panelUsuario" class="panel-heading">
+                        <button id="generarLetra" class="btn btn-info center-block">
+                                Genera la letra
+                            </button>
+                        <div id="letraSeleccionada"></div>
+                    </div>
+                    <div id="chat" class="panel-body">
+
+
+                    </div>
+                    <div class="panel-footer center-block">
+
+                        <button data-loading-text="Calculando Resultados..." autocomplete="off" id="botonStop" class="btn btn-success center-block">
+                                STOP!
+                            </button>
+                        <button id="botonGenerarResultados" class="btn pull-right btn-success">
+                                Generar resultados!
+                            </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-xs-2 col-md-2 col-sm-2 text-center">
+                <button type="button" id="reiniciar_juego" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-repeat"></i></button>
+                <br></br>
+                <div id="divResultados" class="panel panel-info">
+                    <div class="panel-heading">
+                        RESULTADOS
+                    </div>
+                    <div class="panel-body" id="">
+                        <table class="table table-responsive table-hover" id="tablaResultados" style="display:none">
+                            <thead>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Puntaje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        JUGADORES
+                    </div>
+                    <div class="panel-body" id="users">
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div id="juegoOcupado" class="jumbotron" style="display:none;">
+            <h3 style="color:red;">Hay una partida en este momento!</h3>
+            <p>Un grupo esta jungando Stop Online en este momento, por favor intenta en 1 minuto cuano acaben de jugar.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Intentar ahora</a></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+    </script>
+
+
+    <div id="procesamiento-tabla">
+
+
+    </div>
+    <div id="reinicio-tabla"></div>
+
+</body>
+
+</html>
